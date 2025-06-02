@@ -21,10 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
     <p><strong>💳 Kartou:</strong> ${data.kartou} Kč</p>
     <p><strong>📄 Faktura:</strong> ${data.fakturou} Kč</p>
     <p><strong>📍 Přístavné:</strong> ${data.pristavne} Kč</p>
-    <p><strong>💸 Jiné platby:</strong> ${data.jine} Kč</p>
     <hr>
     <p><strong>📦 K odevzdání:</strong> <span class="highlight">${data.kOdevzdani} Kč</span></p>
-    <p><strong>💵 Výplata řidiče:</strong> <span class="green">${data.vyplata} Kč</span></p>
+    <p><strong>👛 Výplata řidiče:</strong> <span class="green">${data.vyplata} Kč</span></p>
     ${data.doplatek > 0 ? `<p class="alert blikajici-hlaska">🚨 Tržba/km je příliš nízká: Doplatek řidiče ${data.doplatek} Kč (min. 15 Kč/km)</p>` : ""}
   `;
 });

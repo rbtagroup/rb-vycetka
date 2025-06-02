@@ -7,7 +7,9 @@
 }
 
 body {
-  background-color: #fdf6e3;
+  background-color: #fff8e1;
+  color: #333;
+  padding: 1rem;
 }
 
 h1, h2 {
@@ -17,10 +19,8 @@ h1, h2 {
 }
 
 .container {
-  padding-left: 5vw;
-  padding-right: 5vw;
-  max-width: 100%;
-  box-sizing: border-box;
+  max-width: 480px;
+  margin: auto;
 }
 
 form label {
@@ -87,17 +87,30 @@ section.active {
 }
 
 
-@keyframes blikani {
-  0%, 100% { opacity: 1; }
-  25%, 75% { opacity: 0; }
-  50% { opacity: 1; }
+/* Zvýraznění aktivního pole */
+input:focus, select:focus {
+  border-color: #ffcc00;
+  box-shadow: 0 0 4px #ffcc00;
+  outline: none;
 }
 
-.blikajici-hlaska {
-  animation: blikani 1s ease-in-out 3;
+/* Základní typografie */
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: system-ui, sans-serif;
+  color: #111;
 }
 
+/* Větší tlačítka */
+button {
+  font-size: 16px;
+  padding: 12px 20px;
+  min-height: 44px;
+  cursor: pointer;
+}
 
+/* Výrazné barevné bloky */
 .alert {
   background-color: #ffe6e6;
   border-left: 6px solid #ff0000;
@@ -107,12 +120,45 @@ section.active {
   font-weight: bold;
 }
 
-body.gold-theme {
-  background-color: #fdf6e3;
+.green {
+  color: #007700;
 }
-.output-page {
-  padding-left: 5vw;
-  padding-right: 5vw;
-  max-width: 100%;
-  box-sizing: border-box;
+
+.highlight {
+  color: #0000cc;
+  font-weight: bold;
+}
+
+/* Dark mode podpora */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #ffffff;
+  }
+
+  input, select {
+    background-color: #1e1e1e;
+    color: #fff;
+    border-color: #444;
+  }
+
+  button {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+  }
+
+  .alert {
+    background-color: #330000;
+    color: #ff6666;
+    border-left: 4px solid #ff3333;
+  }
+
+  .green {
+    color: #66ff66;
+  }
+
+  .highlight {
+    color: #66ccff;
+  }
 }

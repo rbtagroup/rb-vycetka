@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const kartou = parseFloat(document.getElementById("kartou").value);
     const fakturou = parseFloat(document.getElementById("fakturou").value);
     const pristavne = parseFloat(document.getElementById("pristavne").value);
-    const jine = parseFloat(document.getElementById("jine").value) || 0;
     const smena = document.getElementById("typSměny").value;
 
     if (!name || isNaN(trzba) || isNaN(km)) {
@@ -24,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    let trzbaPoOdpoctech = trzba - palivo - myti - kartou - fakturou - jine;
+    let trzbaPoOdpoctech = trzba - palivo - myti - kartou - fakturou;
     let vyplata = 0;
     let doplatek = 0;
     let minimalni = smena === "pul" ? 500 : 1000;
@@ -45,14 +44,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const result = {
       ridic: name,
-      smena,
-      trzba,
-      km,
-      palivo,
-      myti,
-      kartou,
-      fakturou,
-      pristavne,
+      smena: smena,
+      trzba: trzba.toFixed(2),
+      palivo: palivo.toFixed(2),
+      myti: myti.toFixed(2),
+      kartou: kartou.toFixed(2),
+      fakturou: fakturou.toFixed(2),
+      pristavne: pristavne.toFixed(2),
       jine,
       vyplata: vyplata.toFixed(2),
       kOdevzdani: odevzdani.toFixed(2),
