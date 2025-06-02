@@ -17,7 +17,8 @@ h1, h2 {
 }
 
 .container {
-  padding: 1rem;
+  padding-left: 5vw;
+  padding-right: 5vw;
   max-width: 100%;
   box-sizing: border-box;
 }
