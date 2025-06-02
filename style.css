@@ -110,3 +110,9 @@ section.active {
 body.gold-theme {
   background-color: #fdf6e3;
 }
+.output-page {
+  padding-left: 5vw;
+  padding-right: 5vw;
+  max-width: 100%;
+  box-sizing: border-box;
+}
