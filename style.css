@@ -17,8 +17,9 @@ h1, h2 {
 }
 
 .container {
-  max-width: 480px;
-  margin: auto;
+  padding: 1rem;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 form label {
